@@ -1,9 +1,9 @@
-from ..engine import AsyncSearchEngine
+from ..engine import SearchEngine
 from ..config import PROXY, TIMEOUT, FAKE_USER_AGENT
 from ..utils import unquote_url
 import aiohttp
 
-class Dogpile(AsyncSearchEngine):
+class Dogpile(SearchEngine):
     '''Searches dogpile.com'''
 
     def __init__(self, proxy=PROXY, timeout=TIMEOUT):

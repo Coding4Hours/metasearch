@@ -1,11 +1,11 @@
-from ..engine import AsyncSearchEngine
+from ..engine import SearchEngine
 from ..config import PROXY, TIMEOUT, FAKE_USER_AGENT
 from ..utils import unquote_url, quote_url
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, parse_qs
 import aiohttp
 
-class Google(AsyncSearchEngine):
+class Google(SearchEngine):
     '''Searches google.com'''
 
     def __init__(self, proxy=PROXY, timeout=TIMEOUT):

@@ -1,12 +1,12 @@
 import aiohttp
 from json import loads
 
-from ..engine import AsyncSearchEngine
+from ..engine import SearchEngine
 from ..config import PROXY, TIMEOUT
 from ..utils import unquote_url
 
 
-class Qwant(AsyncSearchEngine):
+class Qwant(SearchEngine):
     '''Searches qwant.com'''
     def __init__(self, proxy=PROXY, timeout=TIMEOUT):
         super(Qwant, self).__init__(proxy, timeout)

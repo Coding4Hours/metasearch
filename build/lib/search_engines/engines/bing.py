@@ -1,8 +1,8 @@
-from ..engine import AsyncSearchEngine
+from ..engine import SearchEngine
 from ..config import PROXY, TIMEOUT, FAKE_USER_AGENT
 import aiohttp
 
-class Bing(AsyncSearchEngine):
+class Bing(SearchEngine):
     '''Searches bing.com'''
 
     def __init__(self, proxy=PROXY, timeout=TIMEOUT):

@@ -1,12 +1,12 @@
 import aiohttp
 from bs4 import BeautifulSoup
 
-from ..engine import AsyncSearchEngine
+from ..engine import SearchEngine
 from ..config import PROXY, TIMEOUT, FAKE_USER_AGENT
 from .. import output as out
 
 
-class Startpage(AsyncSearchEngine):
+class Startpage(SearchEngine):
     '''Searches startpage.com'''
     def __init__(self, proxy=PROXY, timeout=TIMEOUT): 
         super(Startpage, self).__init__(proxy, timeout)

@@ -1,11 +1,11 @@
 from bs4 import BeautifulSoup
 import aiohttp
 
-from search_engines.engine import AsyncSearchEngine
+from search_engines.engine import SearchEngine
 from search_engines.config import PROXY, TIMEOUT, FAKE_USER_AGENT
 
 
-class Mojeek(AsyncSearchEngine):
+class Mojeek(SearchEngine):
     '''Searches mojeek.com'''
 
     def __init__(self, proxy=PROXY, timeout=TIMEOUT):

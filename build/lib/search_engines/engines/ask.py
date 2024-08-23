@@ -1,8 +1,8 @@
-from ..engine import AsyncSearchEngine
+from ..engine import SearchEngine
 from ..config import PROXY, TIMEOUT
 import aiohttp
 
-class Ask(AsyncSearchEngine):
+class Ask(SearchEngine):
     '''Searches ask.com'''
     
     def __init__(self, proxy=PROXY, timeout=TIMEOUT):

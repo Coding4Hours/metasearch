@@ -1,10 +1,10 @@
 import aiohttp
-from ..engine import AsyncSearchEngine
+from ..engine import SearchEngine
 from ..config import PROXY, TIMEOUT
 from ..utils import unquote_url
 from bs4 import BeautifulSoup
 
-class Yahoo(AsyncSearchEngine):
+class Yahoo(SearchEngine):
     '''Searches yahoo.com'''
     def __init__(self, proxy=PROXY, timeout=TIMEOUT):
         super(Yahoo, self).__init__(proxy, timeout)

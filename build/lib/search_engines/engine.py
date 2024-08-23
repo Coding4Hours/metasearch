@@ -131,7 +131,7 @@ class AsyncSearchEngine:
         
         :param headers: dict The headers 
         '''
-#        self._http_client.session.headers.update(headers)
+        self._http_client.session.headers.update(headers)
     
     def set_search_operator(self, operator):
         '''Filters search results based on the operator. 

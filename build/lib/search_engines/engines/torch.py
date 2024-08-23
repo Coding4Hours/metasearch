@@ -1,12 +1,12 @@
 import aiohttp
 from bs4 import BeautifulSoup
 
-from ..engine import AsyncSearchEngine
+from ..engine import SearchEngine
 from ..config import TOR, TIMEOUT
 from .. import output as out
 
 
-class Torch(AsyncSearchEngine):
+class Torch(SearchEngine):
     '''Uses torch search engine. Requires TOR proxy.'''
     def __init__(self, proxy=TOR, timeout=TIMEOUT):
         super(Torch, self).__init__(proxy, timeout)
