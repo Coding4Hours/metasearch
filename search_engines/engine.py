@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 from time import sleep
-from random import uniform as random_uniform
 from collections import namedtuple
 
 from .results import SearchResults
@@ -8,6 +7,7 @@ from .http_client import HttpClient
 from . import utils
 from . import output as out
 from . import config as cfg
+import secrets
 
 
 class SearchEngine(object):
@@ -177,7 +177,7 @@ class SearchEngine(object):
                 if not request['url']:
                     break
                 if page < pages:
-                    sleep(random_uniform(*self._delay))
+                    sleep(secrets.SystemRandom().random_uniform(*self._delay))
             except KeyboardInterrupt:
                 break
         out.console('', end='')
